@@ -1,0 +1,4 @@
+20110319 - Patched by Bernd Kreuss to support the new type comet, absolute_magnitude and slope_parameter
+20101106 - Patch by Andrew Hood which enhances the title parsing and adds orbit Epoch
+20100520 - Patch by Andrew Hood which corrects the Perifocus
+20090209 - First Release by Andreas Steinel

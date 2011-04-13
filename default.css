@@ -1,0 +1,132 @@
+/*#############################################################
+Name: Blackbox
+Date: 2006-06-01
+Author: Viktor Persson
+URL: http://arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* Standard elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #999;
+	text-decoration: none;
+}
+body {
+	background: #000 url(img/bg.png) repeat-x fixed left bottom;
+	color: #777;
+	margin: 20px 0;
+	text-align: center;
+	font: normal 0.8em sans-serif,Arial;
+}
+ul {
+	margin: 12px 0;
+}
+li {
+	list-style: url(img/li.gif);
+	margin-left: 18px;
+}
+code {
+	font: normal 1em "Lucida Sans Unicode",serif;
+	color: #888;
+}
+
+
+/* Misc */
+div.quote {
+	margin-bottom: 12px;
+	font: normal 1.1em "Lucida Sans Unicode",serif;
+	background: url(img/quote.gif) no-repeat;
+	padding-left: 28px;
+	color: #666;
+}
+
+
+/* Main structure */
+.main {
+	background: #000; 
+	border: 3px double #EEE; 
+	border-color: #141414 #202020 #222 #202020; 
+	margin: 20px auto 4px auto; 
+	text-align: left;
+	width: 800px; 
+}
+
+
+/* Header */
+.gfx {
+	background: #222 url(img/dark_pixel.png) no-repeat;
+	height: 280px;
+}
+.gfx h1 {
+	color: #FFFFFF
+	font: normal 2.6em Tahoma,sans-serif;
+	padding: 100px;
+    text-align: center;
+}
+
+
+/* Menu */
+.menu a {
+	background: #000 url(img/bgmenu.png) repeat-x;
+	border-right: 1px solid #222;
+	border-top: 1px solid #1A1A1A;
+	color: #444;
+	font-size: 1.1em;
+	float: left;
+	padding-top: 2px;
+	width: 266px; height: 20px;
+    text-align: center;
+}
+.menu a span {
+	padding-left: 6px;
+}
+.menu a:hover {
+	background-position: left bottom;
+	color: #666;
+}
+.menu a#last {
+	border-right: none;
+}
+
+
+/* Content */
+.content {
+	border-top: 1px solid #1A1A1A;
+	background: #1A1A1A;
+	clear: both;
+}
+.content h1 {
+	margin: 0 0 4px;
+	font: bold 1.1em sans-serif,Arial;
+	color: #666;
+}
+.content p {
+	margin: 0 0 12px;
+    text-align: justify;
+}
+.item {
+	background: #030303 url(img/bgitem.gif) repeat-x;
+	padding: 8px 10px;
+}
+
+textarea, .item textarea {
+	font: normal 1em "Courier New",sans-serif;
+}
+
+
+/* Footer */
+.footer {
+	padding: 5px;
+	background: #0A0A0A;
+	color: #666;
+	text-align: right;
+} 
+
+form {
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Convert JPL/Horizons output to stellarium"/>
+        <meta name="keywords" content="stellarium comet JPL horizons"/> 
+        <meta name="author" content="Andreas Steinel"/> 
+        <link rel="stylesheet" type="text/css" href="default.css"/>
+        <script type="text/javascript" src="computation.js"></script>
+        <title>JPL/Horizons Parser for Stellarium</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="gfx"><h1>JPL/Horizons Parser for Stellarium</h1></div>
+            <div class="menu">
+                <a href="http://www.stellarium.org"><span>Stellarium</span></a>
+                <a href="http://www.stellarium.org/wiki/index.php/JPL_HORIZONS"><span>Stellarium Wiki (comet)</span></a>
+                <a href="http://ssd.jpl.nasa.gov/horizons.cgi" id="last"><span>JPL/Horizons</span></a>
+            </div>
+            <div class="content">
+                <div class="item">
+                    <h1>Welcome</h1>
+                    <p>
+                    This site provides an automatic parsing of an JPL/Horizons output for an astronomical object (e.g. a comet) and its
+                    representation in Stellarium. You can directly copy and paste the result in your <code>ssystem.ini</code> in the
+                    <code>data</code> folder of stellarium.
+                    </p>
+                    <p>
+                    If you have no clue what to do here, please refer to the
+                    <a href="http://www.stellarium.org/wiki/index.php/JPL_HORIZONS">Wiki page of Stellarium for importing comet data</a>.
+                    </p>
+                </div>
+                <div class="item">
+                    <h1>Input</h1>
+                    <p>Please paste here the output from JPL/Horizons</p>
+                    <form action="">
+                        <p>
+                        <textarea rows="10" cols="90" name="inputdata" id="inputdata"></textarea><br /><br />
+                        <input type="button" value="Parse Input" onclick="parseText();" />&nbsp;&nbsp;
+                        <input type="reset" value="Reset Form" /><br /><br />
+                        <textarea rows="23" cols="90" name="result" id="result" readonly="readonly"></textarea>
+                        </p>
+                    </form>
+                    <br /> <br />
+                    <p><b>Warning:</b> This comet description is only accurate for the time provided to JPL/Horizons.</p>
+                </div>
+
+                <div class="item">
+                    <h1>Technical Details about this Parser</h1>
+                    <p>
+                    This parser is completely written in JavaScript and the whole webpage is on <a href="http://github.com/lnxbil/stellarium-comet-jpl">GitHUB</a>.
+                    </p>
+                    <p>This software is released under the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a>.</p>
+                </div>
+            </div>
+            <div class="footer">&copy; 2009-2011 <a href="http://andreas.familie-steinel.de">Andreas Steinel</a>. Design based on Backbox by <a href="http://arcsin.se">Arcsin</a></div>
+        </div>
+    </body>
+</html>
