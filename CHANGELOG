@@ -1,4 +1,6 @@
 20110516 - Correcting brightness values provides by JPL to work correctly with stellarium by Bernd Kreuss
+           The corresponding bug in stellarium which describes the 2.5 factor can be found here:
+           https://bugs.launchpad.net/stellarium/+bug/783424
 20110319 - Patched by Bernd Kreuss to support the new type comet, absolute_magnitude and slope_parameter
 20101106 - Patch by Andrew Hood which enhances the title parsing and adds orbit Epoch
 20100520 - Patch by Andrew Hood which corrects the Perifocus
