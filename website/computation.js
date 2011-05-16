@@ -126,12 +126,20 @@ function parseText() {
     
     // make stellarium use an alternative magnitude calculation.
     // If H and G are given then it is an asteroid and if M1 and k1
-    // are given then it is a comet.
+    // are given then it is a comet. 
+    // Note that for comets stellarium is using the formula  
+    // mag = absolute_magnitude + 5 * log10(delta) + 2.5 * slope_parameter * log10(r)
+    // as it is found in the literature but JPL is using the slightly different
+    // mag = M1 + 5 * log10(delta) + k1 * log10(r)
+    // so we have to multiply k1 * 0.4 to have the correct slope parameter
+    
     if (!isNaN(M1) && !isNaN(k1)){
         strHG = "\n# use M1 and k1 for the total magnitude of comets\n" +
+                "#  absolute_magnitude = M1  brightness when 1 AU from sun and 1 AU from earth\n" +
+                "#  slope_parameter = 0.4*k1 rate of brightening when approaching the sun\n" +
                 "type                        = comet\n" +
                 "absolute_magnitude          = " + M1 + "\n" +
-                "slope_parameter             = " + k1 + "\n";
+                "slope_parameter             = " + k1 * 0.4 + "\n";
     } else if (!isNaN(H) && !isNaN(G)){
         strHG = "\n# use H and G for the magnitude of asteroids\n" +
                 "type                        = asteroid\n" +
@@ -159,7 +167,6 @@ function parseText() {
                    "color                       = 1.0,1.0,1.0\n" +
                    "tex_halo                    = star16x16.png\n" +
                    "tex_map                     = nomap.png\n" +
-                   "lighting                    = false\n" +
                    "orbit_Epoch                 = " + epoch + "\n" +
                    "orbit_TimeAtPericenter      = " + Ptp + "\n" +
                    "orbit_PericenterDistance    = " + Pqr + "\n" +
